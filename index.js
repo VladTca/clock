@@ -1,19 +1,19 @@
-let timerId; // переменная, которая будет хранить ID таймера
+let timerId;
 
 
 const startButton = document.getElementById('start');
 startButton.addEventListener('click', function () {
-    // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ setInterval
+
  if(!timerId)
-        timerId = setInterval(updateClock, 1000 /* 1000 миллисекунд = 1 секунда */ ); // запускаем  
+        timerId = setInterval(updateClock, 1000)
 });
 
 const stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
-    // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ clearInterval
+
 
     clearInterval ( timerId );
-    timerId=null; // очищаем переменную таймера, чтобы можно было запустить таймер еще раз.
+    timerId=null;
 })
 function updateClock() {
     const clock = document.getElementById('clock');
